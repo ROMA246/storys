@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crear Obra - StoryNest</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='crear_obra.css') }}">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+<header>
+  <h1>StoryNest ✨</h1>
+  <nav>
+    <a href="{{ url_for('index') }}" class="nav-btn">Inicio</a>
+    <a href="{{ url_for('premium') }}" class="nav-btn premium">Versión Premium</a>
+  </nav>
+</header>
+
+<main class="container">
+  <div class="card">
+    <h2>Crear Nueva Obra</h2>
+
+    {% if error %}
+      <p class="error">{{ error }}</p>
+    {% endif %}
+    {% if mensaje %}
+      <p class="mensaje">{{ mensaje }}</p>
+    {% endif %}
+
+    <form action="{{ url_for('crear_obra') }}" method="post">
+      <label for="tipo">Tipo de obra</label>
+      <select id="tipo" name="tipo" required>
+        {% set tipos = ['cuento','microcuento','novela','poesia','ensayo','reseña','drama','fantasia','terror','romance','ciencia_ficcion','aventura','historia','biografia','humor','drabble','leyenda','mitologia','critica','reportaje','entrevista','fanfic','epistolar','cuento_inf','cuento_adol','narrativa_historica','cuento_horror','cuento_romance','poesia_modernista','poesia_lirica','critica_literaria','articulo','columna','entretenimiento','didactico','ficcion_corta','cuento_epico','narrativa_modernista','cuento_fantastico','narrativa_contemporanea','poesia_epica','cuento_suspense','literatura_infantil','literatura_juvenil'] %}
+        {% for t in tipos %}
+          <option value="{{ t }}" {% if obra and obra.tipo==t %}selected{% endif %}>{{ t.replace("_"," ").capitalize() }}</option>
+        {% endfor %}
+      </select>
+
+      <label for="titulo">Título</label>
+      <input type="text" id="titulo" name="titulo" placeholder="Título de tu obra" value="{{ obra.titulo if obra else '' }}" required>
+
+      <label for="autor">Autor</label>
+      <input type="text" id="autor" name="autor" placeholder="Autor de la obra" value="{{ obra.autor if obra else session.get('user_name','Tú') }}" required>
+
+      <label for="contenido">Contenido</label>
+      <textarea id="contenido" name="contenido" placeholder="Empieza a escribir aquí..." required>{{ obra.contenido if obra else '' }}</textarea>
+
+      <div class="button-group">
+        <button type="submit" name="action" value="save" class="btn save">💾 Guardar como borrador</button>
+        <button type="submit" name="action" value="finish" class="btn finish">✅ Acabar y publicar</button>
+        <a href="https://wa.me/75953654" target="_blank" class="btn contact">💬 Hablar con la editorial</a>
+      </div>
+    </form>
+  </div>
+</main>
+</body>
+</html>

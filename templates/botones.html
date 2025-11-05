@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Botones Storynest</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='botones.css') }}">
+</head>
+<body>
+
+    <h1>Botones Reutilizables Storynest</h1>
+
+    <!-- Botones de navegación -->
+    <div class="nav-buttons">
+        <a href="{{ url_for('index') }}" class="btn btn-inicio">Inicio</a>
+        <a href="{{ url_for('registro') }}" class="btn btn-registro">Registrarse</a>
+        <a href="#carrusel" class="btn btn-carrusel">Ver Carrusel</a>
+    </div>
+
+    <!-- Botones de redes sociales -->
+    <div class="social-buttons">
+        <a href="https://www.facebook.com/" target="_blank" class="btn btn-facebook">Facebook</a>
+        <a href="https://www.instagram.com/" target="_blank" class="btn btn-instagram">Instagram</a>
+        <a href="https://twitter.com/" target="_blank" class="btn btn-twitter">Twitter</a>
+        <a href="https://www.youtube.com/" target="_blank" class="btn btn-youtube">YouTube</a>
+        <a href="https://www.tiktok.com/" target="_blank" class="btn btn-tiktok">TikTok</a>
+    </div>
+
+</body>
+</html>
+

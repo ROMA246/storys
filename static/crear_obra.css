@@ -1,0 +1,206 @@
+/* ====== GENERAL ====== */
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(135deg, #e6e9f0, #fdf6e3); /* suave degradado */
+  color: #1a1a1a;
+  min-height: 100vh;
+}
+
+/* ====== HEADER ====== */
+header {
+  background: #0b3d91; /* azul oscuro */
+  color: #ffd166; /* dorado */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  flex-wrap: wrap;
+}
+
+header h1 {
+  font-size: 1.8rem;
+  letter-spacing: 1px;
+  margin-left: 15px;
+  font-weight: 700;
+}
+
+header .header-message {
+  flex: 1;
+  margin-left: 20px;
+  font-weight: 500;
+  font-size: 1rem;
+  color: #ffd166;
+  text-align: left;
+}
+
+nav {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.nav-btn {
+  text-decoration: none;
+  color: #ffd166;
+  background: rgba(255,209,102,0.15);
+  padding: 10px 22px;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.nav-btn:hover {
+  background: #ffd166;
+  color: #0b3d91;
+}
+
+.nav-btn.premium {
+  background: linear-gradient(135deg, #ffd166, #ffe066);
+  color: #0b3d91;
+}
+
+/* ====== CONTENEDOR PRINCIPAL ====== */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 15px;
+}
+
+/* ====== TARJETA ====== */
+.card {
+  background: #ffffff;
+  border-radius: 25px;
+  padding: 50px 55px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
+  width: 90%;
+  max-width: 700px;
+  border-top: 6px solid #ffd166;
+  animation: fadeIn 0.8s ease;
+}
+
+.card h2 {
+  text-align: center;
+  color: #0b3d91;
+  font-size: 2rem;
+  margin-bottom: 35px;
+  font-weight: 700;
+}
+
+/* ====== FORMULARIO ====== */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+label {
+  font-weight: 600;
+  color: #0b3d91;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 14px 18px;
+  border: 2px solid #ffd166;
+  border-radius: 15px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background: #fffdf4;
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: #0b3d91;
+  outline: none;
+  box-shadow: 0 0 8px rgba(11,61,145,0.4);
+}
+
+textarea {
+  min-height: 180px;
+  resize: vertical;
+}
+
+/* ====== BOTONES ====== */
+.button-group {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.btn {
+  flex: 1;
+  min-width: 120px;
+  padding: 14px 20px;
+  border-radius: 30px;
+  border: none;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+}
+
+.btn.save {
+  background: linear-gradient(135deg, #0b3d91, #064a9e); /* azul intenso */
+  color: #ffd166;
+}
+
+.btn.save:hover {
+  transform: scale(1.05);
+  background: #073a7c;
+}
+
+.btn.finish {
+  background: linear-gradient(135deg, #ffd166, #ffe066); /* dorado */
+  color: #0b3d91;
+}
+
+.btn.finish:hover {
+  background: linear-gradient(135deg, #0b3d91, #0a3d68);
+  color: #ffd166;
+}
+
+.btn.contact {
+  background: linear-gradient(135deg, #0b3d91, #0a2d5f);
+  color: #ffd166;
+}
+
+.btn.contact:hover {
+  background: #064a9e;
+}
+
+/* ====== ANIMACIÓN ====== */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(25px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ====== RESPONSIVO ====== */
+@media (max-width: 650px) {
+  .button-group {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .card {
+    padding: 35px 25px;
+  }
+
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  header .header-message {
+    text-align: left;
+    margin-left: 0;
+  }
+}

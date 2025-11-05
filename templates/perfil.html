@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+{% extends "layout.html" %}
+{% block content %}
+<h2>Mi Perfil</h2>
+<a href="{{ url_for('crear_obra') }}" class="btn">Crear nueva obra</a>
+
+<ul class="perfil-list">
+{% for obra in obras %}
+<li>
+    <strong>{{ obra.titulo }}</strong> - {{ obra.status }}
+    <a href="{{ url_for('editar_obra', obra_id=obra.id) }}" class="btn-small">Editar</a>
+    <form action="{{ url_for('eliminar_obra', obra_id=obra.id) }}" method="post" style="display:inline">
+        <button type="submit" class="btn-small btn-danger">Eliminar</button>
+    </form>
+</li>
+{% else %}
+<p>No tienes obras aún.</p>
+{% endfor %}
+</ul>
+{% endblock %}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Editar Estilo - StoryNest</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='editar_estilo.css') }}">
+  <link href="https://fonts.googleapis.com/css2?family=Inter&family=Merriweather&family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1>StoryNest ✨</h1>
+    <nav>
+      <a href="{{ url_for('index') }}">Inicio</a> |
+      <a href="{{ url_for('perfil') }}">Menú</a> |
+      <a href="{{ url_for('logout') }}">Salir</a>
+    </nav>
+  </header>
+
+  <main class="contenedor">
+    <div class="card">
+      <h2>Editar Estilo de la Obra</h2>
+      <form method="POST">
+        <label>Color del texto</label>
+        <input type="color" name="color_texto" id="colorTexto" value="{{ obra.estilo.color_texto if obra.estilo else '#000000' }}">
+
+        <label>Fuente</label>
+        <select name="fuente" id="fuente">
+          <option value="Inter">Inter</option>
+          <option value="Merriweather">Merriweather</option>
+          <option value="Poppins">Poppins</option>
+          <option value="Georgia">Georgia</option>
+          <option value="Arial">Arial</option>
+        </select>
+
+        <label>Tamaño de letra</label>
+        <input type="number" name="tamano_letra" id="tamanoLetra" value="{{ obra.estilo.tamano_letra if obra.estilo else '18' }}">
+
+        <label>Color de fondo</label>
+        <input type="color" name="color_fondo" id="colorFondo" value="{{ obra.estilo.color_fondo if obra.estilo else '#ffffff' }}">
+
+        <label>Imagen de fondo (opcional)</label>
+        <input type="url" name="imagen_fondo" id="imagenFondo" value="{{ obra.estilo.imagen_fondo if obra.estilo else '' }}">
+
+        <div class="botones">
+          <button type="submit" class="guardar">Guardar Estilo</button>
+          <a href="{{ url_for('editar_obra', obra_id=obra.id) }}" class="volver">Volver a Editar Obra</a>
+        </div>
+      </form>
+    </div>
+
+    <div class="vista-previa" id="vistaPrevia">
+      <h3>{{ obra.titulo }}</h3>
+      <p>{{ obra.contenido[:200] }}...</p>
+    </div>
+  </main>
+
+  <script>
+    const vista = document.getElementById('vistaPrevia');
+    const colorTexto = document.getElementById('colorTexto');
+    const fuente = document.getElementById('fuente');
+    const tamano = document.getElementById('tamanoLetra');
+    const colorFondo = document.getElementById('colorFondo');
+    const imagenFondo = document.getElementById('imagenFondo');
+
+    function actualizarVista() {
+      vista.style.color = colorTexto.value;
+      vista.style.fontFamily = fuente.value;
+      vista.style.fontSize = tamano.value + 'px';
+      vista.style.backgroundColor = colorFondo.value;
+      vista.style.backgroundImage = imagenFondo.value ? `url(${imagenFondo.value})` : 'none';
+      vista.style.backgroundSize = 'cover';
+      vista.style.backgroundPosition = 'center';
+    }
+
+    [colorTexto, fuente, tamano, colorFondo, imagenFondo].forEach(el => {
+      el.addEventListener('input', actualizarVista);
+    });
+  </script>
+</body>
+</html>

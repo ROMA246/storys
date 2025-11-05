@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Planes Premium - Storynest</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='premium.css') }}">
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <div class="logo">
+      <img src="{{ url_for('static', filename='imagenes/logoS.jpg') }}" alt="Storynest Logo">
+    </div>
+    <div class="header-message">
+      <p>STORY-NEST EL NIDO DE LAS GRANDES HISTORIAS</p>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="{{ url_for('index') }}">Inicio</a></li>
+        <li><a href="{{ url_for('registro') }}">Registro</a></li>
+        <li><a href="{{ url_for('premium') }}" class="active">Planes Premium</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <h1>Planes Premium</h1>
+    <p>Desbloquea todas las funciones exclusivas de Storynest y lleva tus historias al siguiente nivel.</p>
+  </section>
+
+  <!-- PLANES PREMIUM -->
+  <section class="planes">
+    <div class="plan">
+      <h2>Plan 3 Meses</h2>
+      <p class="precio">$9.99 / 3 meses</p>
+      <ul>
+        <li>Acceso completo al editor</li>
+        <li>Sugerencias avanzadas de escritura</li>
+        <li>Descarga de tus libros en PDF</li>
+      </ul>
+      <a href="#" class="btn-suscribirse">Suscribirse</a>
+    </div>
+
+    <div class="plan">
+      <h2>Plan 9 Meses</h2>
+      <p class="precio">$24.99 / 9 meses</p>
+      <ul>
+        <li>Todo del Plan 3 Meses</li>
+        <li>Temas premium para libros</li>
+        <li>Soporte prioritario</li>
+      </ul>
+      <a href="#" class="btn-suscribirse">Suscribirse</a>
+    </div>
+
+    <div class="plan">
+      <h2>Plan 12 Meses</h2>
+      <p class="precio">$32.99 / 12 meses</p>
+      <ul>
+        <li>Todo del Plan 9 Meses</li>
+        <li>Acceso a concursos exclusivos</li>
+        <li>Publicación en la plataforma Storynest</li>
+      </ul>
+      <a href="#" class="btn-suscribirse">Suscribirse</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-socials">
+      <a href="https://www.facebook.com/" target="_blank" class="social-btn">
+        <img src="{{ url_for('static', filename='imagenes/facebook.png') }}" alt="Facebook">
+      </a>
+      <a href="https://www.instagram.com/" target="_blank" class="social-btn">
+        <img src="{{ url_for('static', filename='imagenes/instagram.png') }}" alt="Instagram">
+      </a>
+      <a href="https://twitter.com/" target="_blank" class="social-btn">
+        <img src="{{ url_for('static', filename='imagenes/twitter.png') }}" alt="Twitter">
+      </a>
+    </div>
+
+    <div class="footer-links">
+      <a href="{{ url_for('terminos') }}" class="footer-link">Términos</a>
+      <a href="{{ url_for('privacidad') }}" class="footer-link">Política de Privacidad</a>
+    </div>
+
+    <p>&copy; 2025 Storynest</p>
+  </footer>
+
+</body>
+</html>

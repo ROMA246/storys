@@ -1,0 +1,230 @@
+/* ---------------- RESET ---------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, #e0f7fa, #fdf6e3);
+  color: #1a1a1a;
+  text-align: center;
+  min-height: 100vh;
+}
+
+/* ---------------- HEADER ---------------- */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #0b3d91;
+  padding: 20px 50px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+  flex-wrap: wrap;
+}
+
+header .logo img {
+  height: 60px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+}
+
+nav a {
+  color: #ffd166;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1em;
+  transition: all 0.3s ease;
+}
+
+nav a:hover {
+  color: #fff;
+  transform: scale(1.1);
+}
+
+/* ---------------- SECCIÓN REGISTRO ---------------- */
+.register {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 90vh;
+  padding: 40px 20px;
+}
+
+.register-container {
+  background: #fff;
+  padding: 50px 35px;
+  border-radius: 25px;
+  max-width: 450px;
+  width: 100%;
+  box-shadow: 0 12px 25px rgba(0,0,0,0.25);
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.register-container:hover {
+  transform: translateY(-5px);
+}
+
+.register-container h2 {
+  font-size: 2.4em;
+  margin-bottom: 10px;
+  color: #0b3d91;
+}
+
+.register-container p {
+  font-size: 1.1em;
+  margin-bottom: 25px;
+  color: #555;
+}
+
+.register-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.register-container label {
+  text-align: left;
+  font-weight: bold;
+  color: #0b3d91;
+  font-size: 0.95em;
+}
+
+.register-container input {
+  padding: 14px 16px;
+  border-radius: 12px;
+  border: 1px solid #0b3d91;
+  font-size: 1em;
+  transition: all 0.3s ease;
+  background: #fdf6e3;
+}
+
+.register-container input:focus {
+  outline: none;
+  border-color: #ffd166;
+  box-shadow: 0 0 10px #ffd166;
+}
+
+/* ---------------- BOTONES FORMULARIO ---------------- */
+.botones-formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.btn-atras {
+  padding: 12px 0;
+  background: #0b3d91;
+  color: #ffd166;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn-atras:hover {
+  background: #0463a6;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+.btn-registrarse {
+  padding: 16px 0;
+  background: linear-gradient(135deg, #ffd166, #ffe066);
+  color: #0b3d91;
+  font-size: 1.3em;
+  font-weight: bold;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-registrarse:hover {
+  background: linear-gradient(135deg, #0b3d91, #0463a6);
+  color: #fff;
+  transform: scale(1.05);
+}
+
+/* ---------------- LOGIN LINK ---------------- */
+.register-container .login-link {
+  margin-top: 15px;
+  font-size: 0.95em;
+}
+
+.register-container .login-link a {
+  color: #ffd166;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.register-container .login-link a:hover {
+  color: #0b3d91;
+  text-decoration: underline;
+}
+
+/* ---------------- ERROR ---------------- */
+.error {
+  color: red;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* ---------------- FOOTER ---------------- */
+footer {
+  background: #0b3d91;
+  color: #ffd166;
+  padding: 40px 20px;
+  text-align: center;
+  font-weight: bold;
+  box-shadow: 0 -4px 15px rgba(0,0,0,0.25);
+}
+
+footer .footer-links {
+  margin-bottom: 15px;
+  font-size: 0.95em;
+}
+
+footer .footer-links a {
+  color: #ffd166;
+  text-decoration: none;
+  margin: 0 5px;
+  transition: all 0.3s ease;
+}
+
+footer .footer-links a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+footer .social-icons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+footer .social-icons a {
+  display: inline-block;
+  background: #ffd166;
+  color: #0b3d91;
+  padding: 10px 18px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+footer .social-icons a:hover {
+  background: #0b3d91;
+  color: #fff;
+  transform: scale(1.1);
+}

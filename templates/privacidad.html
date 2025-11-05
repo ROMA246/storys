@@ -1,0 +1,109 @@
+<!-- privacidad.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Privacidad - Storynest</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='registro.css') }}">
+    <style>
+        main section {
+            max-width: 900px;
+            margin: 40px auto;
+            line-height: 1.7;
+            text-align: justify; /* Alinea el texto a ambos lados */
+            padding: 0 15px;
+        }
+        h3 {
+            margin-top: 25px;
+            color: #041c32;
+        }
+        p {
+            margin-top: 12px;
+            color: #333;
+        }
+        a {
+            color: #f4d35e;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        ul {
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div style="padding:12px 30px; background:#041c32; color:#f4d35e;">
+            <h2>Política de Privacidad</h2>
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <p>Fecha de entrada en vigor: 29 de octubre de 2025</p>
+            <p>En <strong>StoryNest</strong>, valoramos y respetamos tu privacidad. Esta Política de Privacidad describe cómo recopilamos, usamos, compartimos y protegemos la información que obtienes al utilizar nuestra plataforma.</p>
+
+            <h3>1. Información que recopilamos</h3>
+            <ul>
+                <li><strong>Información personal:</strong> Nombre, correo electrónico, fecha de nacimiento y datos de contacto.</li>
+                <li><strong>Información de uso:</strong> Historias creadas, comentarios, interacciones dentro de la plataforma y preferencias de lectura.</li>
+                <li><strong>Información técnica:</strong> Dirección IP, tipo de dispositivo, navegador, sistema operativo y datos de cookies.</li>
+                <li><strong>Contenido generado por el usuario:</strong> Historias, imágenes, videos y cualquier otro contenido que subas o compartas en la plataforma.</li>
+            </ul>
+
+            <h3>2. Cómo usamos tu información</h3>
+            <ul>
+                <li>Permitir la creación, edición y publicación de tus historias.</li>
+                <li>Mejorar nuestra plataforma y personalizar tu experiencia.</li>
+                <li>Comunicarnos contigo, incluyendo notificaciones sobre actualizaciones, ofertas y novedades.</li>
+                <li>Prevenir fraudes, actividades ilegales o violaciones de nuestras normas.</li>
+                <li>Cumplir con obligaciones legales.</li>
+            </ul>
+
+            <h3>3. Compartir información</h3>
+            <ul>
+                <li><strong>Con proveedores de servicios:</strong> Para el funcionamiento de la plataforma, almacenamiento en la nube o análisis de datos.</li>
+                <li><strong>Con consentimiento:</strong> Cuando tú nos des permiso explícito para compartir información.</li>
+                <li><strong>Por obligaciones legales:</strong> Si la ley lo requiere, o para proteger derechos legales de StoryNest o de terceros.</li>
+            </ul>
+
+            <h3>4. Seguridad</h3>
+            <p>Implementamos medidas de seguridad técnicas y organizativas para proteger tu información frente a accesos no autorizados, alteraciones, pérdida o destrucción. Sin embargo, ningún sistema es completamente infalible, por lo que no podemos garantizar seguridad absoluta.</p>
+
+            <h3>5. Tus derechos</h3>
+            <ul>
+                <li>Acceder a la información personal que tenemos sobre ti.</li>
+                <li>Solicitar correcciones o eliminación de tus datos.</li>
+                <li>Limitar el procesamiento de tus datos.</li>
+                <li>Retirar tu consentimiento en cualquier momento para el uso de tus datos.</li>
+                <li>Presentar reclamaciones ante autoridades de protección de datos.</li>
+            </ul>
+
+            <h3>6. Cookies y tecnologías similares</h3>
+            <p>StoryNest utiliza cookies para:</p>
+            <ul>
+                <li>Recordar tus preferencias y mantener tu sesión activa.</li>
+                <li>Analizar el tráfico y el uso de la plataforma.</li>
+                <li>Personalizar contenido y publicidad dentro de la plataforma.</li>
+            </ul>
+            <p>Puedes configurar tu navegador para bloquear cookies, aunque esto podría afectar la funcionalidad de StoryNest.</p>
+
+            <h3>7. Cambios en la Política de Privacidad</h3>
+            <p>Podemos actualizar esta política ocasionalmente. Te notificaremos sobre cambios significativos mediante correo electrónico o notificación dentro de la plataforma. Te recomendamos revisar esta política periódicamente.</p>
+
+            <h3>8. Contacto</h3>
+            <p>Si tienes preguntas sobre esta Política de Privacidad o sobre tus datos, puedes contactarnos en:<br>
+               Correo: <a href="mailto:privacidad@storynest.com">privacidad@storynest.com</a><br>
+               Dirección: Av. Creatividad 123, Ciudad Imaginaria, País Fantástico
+            </p>
+
+            <p style="text-align:center; margin-top:30px;"><a href="{{ url_for('index') }}">Volver</a></p>
+        </section>
+    </main>
+
+</body>
+</html>

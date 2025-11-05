@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Editar Obra - {{ obra.titulo }}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='editar_obra.css') }}">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+<header>
+  <h1>StoryNest ✨</h1>
+  <nav>
+    <a href="{{ url_for('index') }}" class="nav-btn">Inicio</a>
+    <a href="{{ url_for('premium') }}" class="nav-btn premium">Versión Premium</a>
+  </nav>
+</header>
+
+<main class="container">
+  <div class="card">
+    <h2>Editar Obra</h2>
+
+    {% if error %}<p class="error">{{ error }}</p>{% endif %}
+    {% if mensaje %}<p class="mensaje">{{ mensaje }}</p>{% endif %}
+
+    <form action="{{ url_for('editar_obra') }}?obra_id={{ obra.id }}" method="post">
+      <label for="tipo">Tipo de obra</label>
+      <select id="tipo" name="tipo" required>
+        {% for t in ['cuento','microcuento','novela','poesia','ensayo','reseña','drama','fantasia','terror','romance','ciencia_ficcion'] %}
+          <option value="{{ t }}" {% if obra.tipo==t %}selected{% endif %}>{{ t.replace("_"," ").capitalize() }}</option>
+        {% endfor %}
+      </select>
+
+      <label for="titulo">Título</label>
+      <input type="text" id="titulo" name="titulo" value="{{ obra.titulo }}" required>
+
+      <label for="autor">Autor</label>
+      <input type="text" id="autor" name="autor" value="{{ obra.autor }}" required>
+
+      <label for="contenido">Contenido</label>
+      <textarea id="contenido" name="contenido" required>{{ obra.contenido }}</textarea>
+
+      <div class="button-group">
+        <button type="submit" name="action" value="save" class="btn save">💾 Guardar</button>
+        <a href="{{ url_for('editar_obra_estilo', obra_id=obra.id) }}" class="btn finish">🎨 Editar Estilo</a>
+        <a href="https://wa.me/75953654" target="_blank" class="btn contact">💬 Hablar con la editorial</a>
+      </div>
+    </form>
+  </div>
+</main>
+</body>
+</html>

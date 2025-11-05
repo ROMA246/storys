@@ -1,0 +1,88 @@
+<!-- terminos.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Términos - Storynest</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='registro.css') }}">
+    <style>
+        main section {
+            max-width: 900px;
+            margin: 40px auto;
+            line-height: 1.7;
+            text-align: justify; /* Texto alineado recto a ambos lados */
+            padding: 0 15px;
+        }
+        h3 {
+            margin-top: 25px;
+            color: #041c32;
+        }
+        p {
+            margin-top: 12px;
+            color: #333;
+        }
+        a {
+            color: #f4d35e;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        ul {
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div style="padding:12px 30px; background:#041c32; color:#f4d35e;">
+            <h2>Términos y Condiciones</h2>
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <h3>1. Uso de la plataforma</h3>
+            <p>StoryNest permite crear, editar, publicar y compartir historias digitales. Debes ser mayor de edad o contar con el consentimiento de tus tutores para usar la plataforma. Estás obligado a proporcionar información verdadera y completa al registrarte.</p>
+
+            <h3>2. Cuentas de usuario</h3>
+            <p>Cada usuario es responsable de mantener la confidencialidad de su cuenta y contraseña. Eres responsable de todas las actividades realizadas desde tu cuenta. StoryNest se reserva el derecho de suspender o eliminar cuentas que violen estos Términos.</p>
+
+            <h3>3. Contenido del usuario</h3>
+            <p>Los usuarios conservan la propiedad de sus historias, imágenes, videos y otros contenidos creados. Al subir contenido a StoryNest, nos otorgas una licencia no exclusiva, mundial y libre de regalías para usar, mostrar, reproducir y distribuir ese contenido dentro de la plataforma. Está prohibido subir contenido que sea ilegal, ofensivo, difamatorio o que infrinja derechos de terceros.</p>
+
+            <h3>4. Propiedad intelectual</h3>
+            <p>StoryNest y todo su contenido original (software, diseño, gráficos, logos, marcas) son propiedad de StoryNest o sus licenciantes. No puedes usar, reproducir ni distribuir materiales de StoryNest sin autorización expresa.</p>
+
+            <h3>5. Conducta del usuario</h3>
+            <ul>
+                <li>No usar StoryNest para actividades ilegales o fraudulentas.</li>
+                <li>No difundir virus, malware o software dañino.</li>
+                <li>No interferir con el funcionamiento de la plataforma o sus servidores.</li>
+                <li>No acosar, intimidar o dañar a otros usuarios.</li>
+            </ul>
+
+            <h3>6. Limitación de responsabilidad</h3>
+            <p>StoryNest no se hace responsable por pérdidas, daños o problemas derivados del uso de la plataforma. La plataforma se ofrece “tal cual” y no garantiza disponibilidad continua o libre de errores.</p>
+
+            <h3>7. Modificaciones</h3>
+            <p>StoryNest puede actualizar los Términos y Condiciones en cualquier momento. Los cambios entran en vigor desde su publicación en la plataforma. El uso continuado de StoryNest constituye aceptación de los nuevos términos.</p>
+
+            <h3>8. Terminación</h3>
+            <p>StoryNest puede suspender o cerrar tu cuenta si violas estos Términos. Puedes cerrar tu cuenta en cualquier momento mediante la opción correspondiente en la plataforma.</p>
+
+            <h3>9. Legislación aplicable</h3>
+            <p>Estos Términos se rigen por las leyes del país donde StoryNest tiene su sede. Cualquier disputa será resuelta ante los tribunales competentes de esa jurisdicción.</p>
+
+            <h3>10. Contacto</h3>
+            <p>Para dudas sobre estos Términos y Condiciones: <br>
+               Correo: <a href="mailto:soporte@storynest.com">soporte@storynest.com</a><br>
+               Dirección: Av. Creatividad 123, Ciudad Imaginaria, País Fantástico
+            </p>
+
+            <p style="text-align:center; margin-top:30px;"><a href="{{ url_for('index') }}">Volver</a></p>
+        </section>
+    </main>
+</body>
+</html>

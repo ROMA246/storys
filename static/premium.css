@@ -1,0 +1,237 @@
+/* ---------------- RESET ---------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(135deg, #e6edf7, #fdf6e3); /* fondo más moderno */
+  color: #1a1a1a;
+  min-height: 100vh;
+}
+
+/* ---------------- HEADER ---------------- */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background: #0b3d91;
+  color: #ffd166;
+  border-bottom: 4px solid #ffd166;
+  flex-wrap: wrap;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+header .logo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+header .logo img {
+  height: 56px;
+}
+
+.header-message {
+  flex: 1;
+  text-align: left; /* al lado del logo */
+  font-weight: 700;
+  color: #ffd166;
+  font-size: 1.05em;
+}
+
+nav ul {
+  display: flex;
+  gap: 18px;
+  list-style: none;
+  align-items: center;
+}
+
+nav a {
+  color: #ffd166;
+  text-decoration: none;
+  font-weight: 700;
+  padding: 10px 22px;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+}
+
+nav a.active,
+nav a:hover {
+  background: #ffd166;
+  color: #0b3d91;
+  transform: scale(1.05);
+}
+
+/* ---------------- HERO ---------------- */
+.hero {
+  text-align: center;
+  padding: 70px 30px 50px 30px;
+  margin: 40px auto;
+  background: linear-gradient(135deg, #0b3d91, #1a4ca0); /* azul oscuro degradado */
+  color: #ffd166;
+  border-radius: 25px;
+  max-width: 1100px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+}
+
+.hero h1 {
+  font-size: 3.2rem;
+  margin-bottom: 18px;
+  font-weight: 700;
+}
+
+.hero p {
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+/* ---------------- PLANES PREMIUM ---------------- */
+.planes {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  padding: 40px 20px;
+}
+
+.plan {
+  background: #ffffff;
+  color: #0b3d91;
+  padding: 35px 30px;
+  border-radius: 25px;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0 12px 28px rgba(0,0,0,0.25);
+  transition: all 0.3s ease;
+  border-top: 6px solid #ffd166;
+}
+
+.plan:hover {
+  transform: scale(1.06);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+}
+
+.plan h2 {
+  margin-bottom: 15px;
+  font-size: 1.8rem;
+}
+
+.precio {
+  font-size: 1.5em;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.plan ul {
+  list-style: none;
+  margin-bottom: 25px;
+  text-align: left;
+  padding-left: 20px;
+}
+
+.plan ul li {
+  margin: 12px 0;
+}
+
+/* Botón suscribirse */
+.btn-suscribirse {
+  display: inline-block;
+  background: linear-gradient(135deg, #ffd166, #ffe066);
+  color: #0b3d91;
+  padding: 14px 28px;
+  border-radius: 30px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+
+.btn-suscribirse:hover {
+  background: linear-gradient(135deg, #0b3d91, #064a9e);
+  color: #ffd166;
+  transform: scale(1.08);
+}
+
+/* ---------------- FOOTER ---------------- */
+footer {
+  text-align: center;
+  padding: 60px 20px;
+  background: #0b3d91;
+  color: #ffd166;
+}
+
+.footer-socials {
+  margin-bottom: 25px;
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+}
+
+.social-btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #ffd166;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.social-btn img {
+  width: 24px;
+  height: 24px;
+}
+
+.social-btn:hover {
+  background: #0b3d91;
+  transform: scale(1.2);
+}
+
+.footer-links {
+  margin-bottom: 18px;
+}
+
+.footer-link {
+  color: #ffd166;
+  margin: 0 12px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+  color: #fff;
+}
+
+/* ---------------- RESPONSIVO ---------------- */
+@media (max-width: 768px) {
+  .hero {
+    padding: 50px 20px 40px 20px;
+  }
+
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .header-message {
+    text-align: left;
+    margin-left: 0;
+  }
+
+  .planes {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .plan {
+    width: 90%;
+  }
+}
